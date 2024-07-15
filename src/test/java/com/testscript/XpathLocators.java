@@ -33,6 +33,42 @@ public class XpathLocators extends Base {
 		WebElement xPathAnd1=driver.findElement(By.xpath("//button[text()='Show Message' and @id='button-one']"));
 		WebElement xPathAnd2=driver.findElement(By.xpath("//button[text()='Get Total' and @id='button-two']"));
 		WebElement xPathAnd3=driver.findElement(By.xpath("//div[text()=' Your Message :' and @id='message-one']"));
+		
+		//xpath AXES methods
+		WebElement xPathFollow=driver.findElement(By.xpath("//div[@id='message-one']//following::button[@id='button-two']"));
+		WebElement xPathPreceed=driver.findElement(By.xpath("//div[@id='message-one']//preceding::button[@id='button-one']"));
+		//WebElement xPathToFindParent=driver.findElement(By.xpath("//button[@id='button-one']/.."));
+		WebElement xPathChild=driver.findElement(By.xpath("//form[@method='POST']//child::button[@id='button-one']"));
+		WebElement xPathParent=driver.findElement(By.xpath("//button[@id='button-one']//parent::form[@method='POST']"));
+		
+		//following
+		WebElement xPathFollow1=driver.findElement(By.xpath("//input[@id='value-b']//following::button[@id='button-two']"));
+		WebElement xPathFollow2=driver.findElement(By.xpath("//input[@id='value-a']//following::button[@id='button-two']"));
+		//preceeding
+		WebElement xPathPreced1=driver.findElement(By.xpath("//input[@id='value-b']//preceding::button[@id='button-one']"));
+		WebElement xPathPreced2=driver.findElement(By.xpath("//input[@id='value-a']//preceding::button[@id='button-one']"));
+		//child
+		WebElement xPathChild1=driver.findElement(By.xpath("//form[@method='POST']//child::div[@id='message-one']"));
+		WebElement xPathChild2=driver.findElement(By.xpath("//div[@class='form-group']//child::input[@id='value-b']"));
+		WebElement xPathChild3=driver.findElement(By.xpath("//form[@method='POST']//child::input[@id='value-b']"));
+		//parent
+		WebElement xPathParent1=driver.findElement(By.xpath("//button[@id='button-two']//parent::form[@method='POST']"));
+		WebElement xPathParent2=driver.findElement(By.xpath("//input[@id='value-b']//parent::div[@class='form-group']"));
+		
+		//Ancestor
+		WebElement xPathAncestor=driver.findElement(By.xpath("//button[@id='button-one']//ancestor::div[@class='card']"));
+		WebElement xPathAncestor1=driver.findElement(By.xpath("//div[@id='message-one']//ancestor::form[@method='POST']"));
+		//Descendant
+		WebElement xPathDescendant=driver.findElement(By.xpath("//div[@class='form-group']//descendant::label[@for='inputEmail4']"));
+		WebElement xPathDescendant1=driver.findElement(By.xpath("//form[@method='POST']//descendant::div[@id='message-one']"));
+		// Following-sibling
+		WebElement xPathFollowSibiling=driver.findElement(By.xpath("//label[@for='inputEmail4']//following-sibling::input[@id='single-input-field']"));
+		WebElement xPathFollowSibiling2=driver.findElement(By.xpath("//button[@id='button-two']//following-sibling::div[@class='my-2']"));
+		//Or path can be also given as:
+		WebElement xPathFollowSibiling1=driver.findElement(By.xpath("//label[@for='inputEmail4']//following-sibling::input"));//ethra koduthalum crct aanu
+		//Preceding-sibling
+		//input[@id='single-input-field']//preceding-sibling::abel[@for='inputEmail4']--kittunilla
+	
 	}
 
 	public static void main(String[] args) {
