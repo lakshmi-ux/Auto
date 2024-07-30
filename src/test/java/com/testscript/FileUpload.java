@@ -16,6 +16,7 @@ public class FileUpload extends Base {
 		WebElement chooseFile= driver.findElement(By.xpath("//input[@id='uploadfile_0']"));
 	   chooseFile.sendKeys("C:\\Users\\Emvigo\\Downloads\\Document18.pdf");
 		}
+	
 	public void fileUploadUsingRobotclass() throws AWTException {
 		driver.navigate().to("https://www.ilovepdf.com/pdf_to_word");
 		WebElement selectPdf= driver.findElement(By.xpath("//a[@class='uploader__btn tooltip--left active']"));
